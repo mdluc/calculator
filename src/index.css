@@ -1,13 +1,94 @@
-body {
+@import url('http://fonts.cdnfonts.com/css/modern-vision');
+@import url('http://fonts.cdnfonts.com/css/digital-7-mono');
+:root{
+  --key-font:'Modern Vision', sans-serif;
+  --result-font:'Digital-7 Mono', sans-serif;
+  --number-color: #173c5e;
+  --symbol-color:#528ac8;
+  --number-bg:#CCE5FF;
+  --symbol-bg:#A2D0FA;
+  --bg-color:#EBF5FF;
+
+}
+
+body{
+  background-color: var(--bg-color);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+ .calculator-center {
+    background-color: var(--bg-color);
+    -webkit-box-shadow: -10px 0px 13px -7px #A2D0FA, 10px 0px 13px -7px #A2D0FA, 5px 3px 13px 0px rgba(162,208,250,0); 
+    box-shadow: -10px 0px 13px -7px #A2D0FA, 10px 0px 13px -7px #A2D0FA, 5px 3px 13px 0px rgba(162,208,250,0);
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 35rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(180, 176, 176, 0.507);
+    border-radius:20px;
+  }
+  
+  .calculator {
+    display: grid;
+  
+  }
+  
+  .col-4 {
+    grid-template-columns: repeat(4, 1fr);
+    margin:20px;
+  }
+  
+  .key-btn {
+    padding: 15px;
+    margin:20px;
+    margin:5px;
+    font-size: 2rem;
+    border: 0;
+    border-radius:20px;
+    font-family:var(--key-font);
+  
+  }
+  .key-btn:hover{
+  
+    filter: invert(0.30);
+  }
+  
+  button{
+    font-family:var(--result-font)
+  }
+  
+  .result-container {
+    margin:35px 15px 15px 15px;
+    background-color:var(--number-bg);
+    height:80px;
+    font-family: var(--result-font);
+    border-radius:20px;
+    font-size: 2.5rem;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .result{
+    color:var(--number-color);
+    margin:10px;
+    word-wrap: break-word;
+  }
+  
+  .number{
+    color:var(--number-color);
+    background-color:var(--number-bg);
+  }
+  
+  .symbol{
+    color:var(--symbol-color);
+    background-color: var(--symbol-bg);
+  }
+
+
+
